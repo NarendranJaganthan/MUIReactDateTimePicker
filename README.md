@@ -1,50 +1,138 @@
-## ReactDateTimePicker
+# React Date Time Picker
 
-Mendix pluggable widget (InnoVites) based on [Itvisors/mendix-ReactDateTimePicker](https://github.com/Itvisors/mendix-ReactDateTimePicker), modernized with `react-datepicker` + `date-fns` for improved UX on Mendix React client and non-React runtimes.
+Mendix pluggable widget by **InnoVites** for selecting dates and times in Mendix 9+ web apps (React client). The picker UI is built with [MUI X Date and Time Pickers](https://mui.com/x/react-date-pickers/) (desktop layout, analog time clock, AM/PM) and [date-fns](https://date-fns.org/) for parsing and locales.
+
+| | |
+|---|---|
+| **Widget ID** | `innovites.reactdatetimepicker.ReactDateTimePicker` |
+| **Package** | `innovites.reactdatetimepicker.ReactDateTimePicker.mpk` |
+| **Version** | 1.0.0 |
+| **Platform** | Web (React client) |
+| **License** | MIT |
+
+**Full widget documentation (installation, Studio Pro properties, formats, use cases, troubleshooting):** [docs/WIDGET_DOCUMENTATION.md](docs/WIDGET_DOCUMENTATION.md)
+
+---
 
 ## Features
 
-- Date & time, date-only, or time-only picker modes
-- Locale support via `date-fns` (en, nl, de, fr, and more)
-- Min/max dates, disable past, week numbers
-- Clear button, Today shortcut, focus ring, calendar icon
-- Read-only as control or text (Mendix standard)
-- Studio Pro design preview (`editorPreview.tsx`)
+- **Three modes:** date & time, date only, or time only
+- **MUI X desktop UI:** calendar + analog [Time Clock](https://mui.com/x/react-date-pickers/time-clock/), footer with Today / Cancel / OK
+- **12-hour / 24-hour:** follows locale; optional custom `date-fns` format strings
+- **Locales:** `date-fns` locales (e.g. `en`, `nl`, `de`, `fr`, `es`, …)
+- **Validation:** min/max date, disable past, optional “Valid date” boolean attribute
+- **Time constraints:** min/max hours, minutes, seconds; hour/minute/second steps
+- **UX:** clearable field, week numbers, read-only as control or text, Studio Pro design preview
 
-## UI prototype (browser)
+---
 
-Run the standalone prototype without Mendix:
+## Requirements
+
+- **Node.js** 16 or later
+- **Mendix Studio Pro** 9.x with React client enabled
+- **npm** (or compatible package manager)
+
+---
+
+## Quick start (Mendix)
+
+1. Clone or copy this repository.
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Set your Mendix test app path in `package.json`:
+
+   ```json
+   "config": {
+     "projectPath": "../../YourMendixApp"
+   }
+   ```
+
+4. Build the widget:
+
+   ```bash
+   npm run build
+   ```
+
+5. Copy **one** package into your app’s `widgets` folder:
+
+   `dist/1.0.0/innovites.reactdatetimepicker.ReactDateTimePicker.mpk`
+
+6. In Studio Pro, add **React Date Time Picker** to a page and bind the **DateTime** attribute.
+
+> **Important:** Only one `.mpk` with this widget ID may exist in `widgets/`. Remove duplicates (e.g. `innovites.ReactDateTimePicker 2.mpk`) or Studio Pro will report that widget packages could not be read.
+
+---
+
+## UI prototype (no Mendix)
+
+Run a local Vite app to try the same React UI used in the widget:
 
 ```bash
 npm install
 npm run prototype
 ```
 
-Open **http://localhost:5173** — three demo cards show datetime, date, and time modes.
+Open **http://localhost:5173** — three cards demonstrate datetime, date-only, and time-only modes.
 
-## Mendix runtime
+---
 
-1. Set `config.projectPath` in `package.json` to your Mendix test app folder (`.mpr` project).
-2. `npm run build` then copy **one** `.mpk` from `dist/1.0.0/` into your app’s `widgets` folder.
-3. **Remove duplicate packages** — only one file may define widget id `innovites.reactdatetimepicker.ReactDateTimePicker`. Delete extras such as `innovites.ReactDateTimePicker 2.mpk` if you see “widget packages could not be read”.
-4. `npm run dev` — hot reload with Studio Pro on the same machine (`http://localhost:8080`).
-5. Or `npm start` — watch build and copy widget into the test project `widgets` folder.
+## Development
 
-### Month / year selection
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Watch build + hot reload with Mendix (`config.mendixHost`, default `http://localhost:8080`) |
+| `npm run start` | Watch build and copy widget into the test project `widgets` folder |
+| `npm run build` | Production build → `dist/1.0.0/*.mpk` |
+| `npm run lint` | ESLint via Mendix pluggable-widgets-tools |
+| `npm run lint:fix` | Auto-fix lint issues |
+| `npm run release` | Release build (after `prerelease` / lint) |
 
-The calendar header includes **month** and **year** dropdowns (`<select>`) so users can jump directly without only using arrow buttons.
+### Project layout
 
-Design-time preview: drag the widget in Studio Pro; the preview uses `ReactDateTimePicker.editorPreview.tsx`.
-
-## Build
-
-```bash
-npm run build
+```
+src/
+  ReactDateTimePicker.tsx          # Mendix container (class component)
+  ReactDateTimePickerUI.tsx        # MUI X pickers + date-fns logic
+  MuiPickerProvider.tsx            # Theme + LocalizationProvider
+  muiTimeViewRenderers.ts          # Analog TimeClock view renderers
+  utils/dateTimeFormat.ts          # Locale 12h/24h + format helpers
+  ui/ReactDateTimePicker.css       # Widget + popover styling
+  ReactDateTimePicker.editorPreview.tsx
+prototype/                         # Standalone Vite demo
 ```
 
-Output: `dist/1.0.0/innovites.reactdatetimepicker.ReactDateTimePicker.mpk`
+---
 
-## Reference
+## Documentation
 
-- [Itvisors GitHub](https://github.com/Itvisors/mendix-ReactDateTimePicker)
-- Mendix Marketplace: React Date Time Picker (Itvisors)
+| Document | Audience |
+|----------|----------|
+| [docs/WIDGET_DOCUMENTATION.md](docs/WIDGET_DOCUMENTATION.md) | Mendix developers, BA’s, support — full widget manual |
+| This README | Developers — build, run, and repo overview |
+
+---
+
+## Third-party libraries
+
+- [@mui/x-date-pickers](https://mui.com/x/react-date-pickers/) — picker UI (MIT / MUI licensing)
+- [@mui/material](https://mui.com/material-ui/) — theming and inputs
+- [date-fns](https://date-fns.org/) — parsing, formatting, locales (MIT)
+- [@emotion/react](https://emotion.sh/) — styles used by MUI (MIT)
+
+---
+
+## License
+
+Copyright (c) InnoVites B.V. — MIT. See `package.json` and project license terms.
+
+---
+
+## Author
+
+**Narendran Jaganathan** — InnoVites
+
+For issues and enhancements, use your team’s repository or issue tracker for this widget.
