@@ -1,6 +1,6 @@
-# React Date Time Picker
+# InnoVites Date Time Picker
 
-Mendix pluggable widget by **InnoVites** for selecting dates and times in Mendix 9+ web apps (React client). The picker UI is built with [MUI X Date and Time Pickers](https://mui.com/x/react-date-pickers/) (desktop layout, analog time clock, AM/PM) and [date-fns](https://date-fns.org/) for parsing and locales.
+Mendix pluggable widget by **[InnoVites](https://www.innovites.com/)** for selecting dates and times in Mendix 9+ web apps (React client). The picker UI uses [MUI X Date and Time Pickers](https://mui.com/x/react-date-pickers/) (desktop layout, analog time clock, AM/PM) and [date-fns](https://date-fns.org/) for parsing and locales. Styling follows InnoVites brand colors (gold accent `#f7a823`, warm cream surfaces).
 
 | | |
 |---|---|
@@ -61,7 +61,7 @@ Mendix pluggable widget by **InnoVites** for selecting dates and times in Mendix
 
    `dist/1.0.0/innovites.MUIReactDateTimePicker.mpk`
 
-6. In Studio Pro, add **React Date Time Picker** to a page and bind the **DateTime** attribute.
+6. In Studio Pro, add **InnoVites Date Time Picker** to a page and bind the **DateTime** attribute.
 
 > **Important:** Only one `.mpk` with this widget ID may exist in `widgets/`. Remove the old `innovites.reactdatetimepicker.*` or `innovites.ReactDateTimePicker.mpk` packages if present, or Studio Pro will report that widget packages could not be read.
 
@@ -112,6 +112,7 @@ prototype/                         # Standalone Vite demo
 | Document | Audience |
 |----------|----------|
 | [docs/WIDGET_DOCUMENTATION.md](docs/WIDGET_DOCUMENTATION.md) | Mendix developers, BA’s, support — full widget manual |
+| [docs/blog/medium-innovites-mui-datetime-picker.md](docs/blog/medium-innovites-mui-datetime-picker.md) | Medium / community blog — introduction and how-to |
 | This README | Developers — build, run, and repo overview |
 
 ---

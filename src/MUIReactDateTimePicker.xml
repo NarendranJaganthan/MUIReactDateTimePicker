@@ -3,8 +3,8 @@
         supportedPlatform="Web"
         xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>React Date Time Picker</name>
-    <description>Uses React 18 functional subcomponents, but retains a class-based container for legacy safety</description>
+    <name>InnoVites Date Time Picker</name>
+    <description>InnoVites MUI X date and time picker for Mendix web apps — calendar, analog clock, locales, and validation.</description>
     <icon/>
     <properties>
         <propertyGroup caption="General">

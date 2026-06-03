@@ -5,20 +5,22 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import "@mui/x-date-pickers/themeAugmentation";
 
-const accent = "#2563eb";
-const accentDark = "#1d4ed8";
-const accentLight = "#60a5fa";
-const accentSoft = "#eff6ff";
-const border = "#dbe4f0";
-const text = "#0f172a";
-const muted = "#64748b";
+/** InnoVites brand palette — https://www.innovites.com/ */
+const accent = "#f7a823";
+const accentDark = "#d99218";
+const accentLight = "#f9c96a";
+const accentSoft = "#fff7e9";
+const accentGlow = "rgba(247, 168, 35, 0.35)";
+const border = "#e8dcc4";
+const text = "#1a1a1a";
+const muted = "#595959";
 
 const pickerTheme = createTheme({
     palette: {
         primary: { main: accent, dark: accentDark, light: accentLight, contrastText: "#fff" },
         text: { primary: text, secondary: muted },
         divider: border,
-        background: { paper: "#fff", default: "#f8fafc" }
+        background: { paper: "#fff", default: "#fff7e9" }
     },
     shape: { borderRadius: 10 },
     typography: {
@@ -110,7 +112,7 @@ const pickerTheme = createTheme({
                     "&.Mui-selected": {
                         backgroundColor: accent,
                         fontWeight: 700,
-                        boxShadow: "0 2px 8px rgba(37, 99, 235, 0.35)",
+                        boxShadow: `0 2px 8px ${accentGlow}`,
                         "&:hover": { backgroundColor: accentDark },
                         "&:focus": { backgroundColor: accent }
                     },
@@ -174,7 +176,7 @@ const pickerTheme = createTheme({
                 },
                 clock: {
                     backgroundColor: "#fff",
-                    boxShadow: "inset 0 0 0 1px #dbe4f0, 0 4px 24px rgba(37, 99, 235, 0.12)"
+                    boxShadow: `inset 0 0 0 1px ${border}, 0 4px 24px rgba(247, 168, 35, 0.14)`
                 },
                 amButton: {
                     borderRadius: 999,
@@ -192,7 +194,7 @@ const pickerTheme = createTheme({
                         backgroundColor: accent,
                         borderColor: accent,
                         color: "#fff",
-                        boxShadow: "0 2px 10px rgba(37, 99, 235, 0.35)",
+                        boxShadow: `0 2px 10px ${accentGlow}`,
                         "& .MuiTypography-root": {
                             color: "#fff"
                         }
@@ -214,7 +216,7 @@ const pickerTheme = createTheme({
                         backgroundColor: accent,
                         borderColor: accent,
                         color: "#fff",
-                        boxShadow: "0 2px 10px rgba(37, 99, 235, 0.35)",
+                        boxShadow: `0 2px 10px ${accentGlow}`,
                         "& .MuiTypography-root": {
                             color: "#fff"
                         }
@@ -228,7 +230,7 @@ const pickerTheme = createTheme({
                 thumb: {
                     backgroundColor: accent,
                     borderColor: accent,
-                    boxShadow: "0 1px 4px rgba(37, 99, 235, 0.4)"
+                    boxShadow: `0 1px 4px ${accentGlow}`
                 }
             }
         },

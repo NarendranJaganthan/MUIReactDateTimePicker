@@ -1,7 +1,7 @@
-# React Date Time Picker — Widget Documentation
+# InnoVites Date Time Picker — Widget Documentation
 
 **InnoVites Mendix pluggable widget** · Version 1.0.0  
-**Widget name in Studio Pro:** React Date Time Picker  
+**Widget name in Studio Pro:** InnoVites Date Time Picker  
 **Widget ID:** `innovites.muireactdatetimepicker.MUIReactDateTimePicker`
 
 ---
@@ -26,7 +26,7 @@
 
 ## 1. Overview
 
-The **React Date Time Picker** lets users select a **date**, a **time**, or **both** in Mendix web applications that use the **React client**. The popover UI is based on [MUI X Desktop Date/Time Pickers](https://mui.com/x/react-date-pickers/):
+The **InnoVites Date Time Picker** lets users select a **date**, a **time**, or **both** in Mendix web applications that use the **React client**. The popover UI is based on [MUI X Desktop Date/Time Pickers](https://mui.com/x/react-date-pickers/):
 
 | Mode | What the user sees |
 |------|-------------------|
@@ -74,7 +74,7 @@ The widget writes to a Mendix **`DateTime`** attribute. Formatting and parsing u
 
 3. Open the project in **Studio Pro** and press **F4** (or sync app directory) so the widget appears in the toolbox.
 
-4. Drag **React Date Time Picker** onto a page.
+4. Drag **InnoVites Date Time Picker** onto a page.
 
 5. Set the **DateTime** property to a persistent or non-persistent `DateTime` attribute.
 
@@ -366,11 +366,15 @@ Popover styles use a high `z-index` so the calendar appears above Mendix modals 
 - Theme overrides: `src/components/MuiPickerProvider.tsx`
 - CSS variables are re-declared on `.innovites-dtp__popper` because the popover renders in a **portal** outside the widget root.
 
-Example (in your Mendix theme or custom CSS after deployment):
+Default accent colors match **[InnoVites](https://www.innovites.com/)** brand gold (`#f7a823`) with warm cream surfaces (`#fff7e9`, `#ffe8c0`).
+
+Example override (in your Mendix theme or custom CSS after deployment):
 
 ```css
 .innovites-dtp__popper {
-  --innovites-dtp-accent: #0066cc;
+  --innovites-dtp-accent: #f7a823;
+  --innovites-dtp-accent-dark: #d99218;
+  --innovites-dtp-accent-soft: #fff7e9;
 }
 ```
 
