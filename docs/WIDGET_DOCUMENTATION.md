@@ -2,7 +2,7 @@
 
 **InnoVites Mendix pluggable widget** · Version 1.0.0  
 **Widget name in Studio Pro:** React Date Time Picker  
-**Widget ID:** `innovites.reactdatetimepicker.ReactDateTimePicker`
+**Widget ID:** `innovites.muireactdatetimepicker.MUIReactDateTimePicker`
 
 ---
 
@@ -68,7 +68,7 @@ The widget writes to a Mendix **`DateTime`** attribute. Formatting and parsing u
 2. Copy **exactly one** file into your Mendix project:
 
    ```
-   dist/1.0.0/innovites.reactdatetimepicker.ReactDateTimePicker.mpk
+   dist/1.0.0/innovites.MUIReactDateTimePicker.mpk
    → <YourApp>/widgets/
    ```
 
@@ -403,7 +403,7 @@ Add entries to `localeMap` in `src/components/ReactDateTimePickerUI.tsx` and imp
 
 | Symptom | Likely cause | Solution |
 |---------|--------------|----------|
-| Widget package could not be read | Duplicate `.mpk` | Keep one `innovites.reactdatetimepicker.ReactDateTimePicker.mpk` |
+| Widget package could not be read | Duplicate `.mpk` | Keep one `innovites.MUIReactDateTimePicker.mpk`; remove old `reactdatetimepicker` packages |
 | Widget not in toolbox | Not synced | F4 / Sync app directory; check `widgets/` folder |
 | Picker does not open | Read-only / not available | Check Editability and attribute status |
 | OK button invisible | Stale CSS or portal variables | Rebuild widget; hard refresh browser |

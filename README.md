@@ -4,8 +4,8 @@ Mendix pluggable widget by **InnoVites** for selecting dates and times in Mendix
 
 | | |
 |---|---|
-| **Widget ID** | `innovites.reactdatetimepicker.ReactDateTimePicker` |
-| **Package** | `innovites.reactdatetimepicker.ReactDateTimePicker.mpk` |
+| **Widget ID** | `innovites.muireactdatetimepicker.MUIReactDateTimePicker` |
+| **Package** | `innovites.MUIReactDateTimePicker.mpk` |
 | **Version** | 1.0.0 |
 | **Platform** | Web (React client) |
 | **License** | MIT |
@@ -59,11 +59,11 @@ Mendix pluggable widget by **InnoVites** for selecting dates and times in Mendix
 
 5. Copy **one** package into your app’s `widgets` folder:
 
-   `dist/1.0.0/innovites.reactdatetimepicker.ReactDateTimePicker.mpk`
+   `dist/1.0.0/innovites.MUIReactDateTimePicker.mpk`
 
 6. In Studio Pro, add **React Date Time Picker** to a page and bind the **DateTime** attribute.
 
-> **Important:** Only one `.mpk` with this widget ID may exist in `widgets/`. Remove duplicates (e.g. `innovites.ReactDateTimePicker 2.mpk`) or Studio Pro will report that widget packages could not be read.
+> **Important:** Only one `.mpk` with this widget ID may exist in `widgets/`. Remove the old `innovites.reactdatetimepicker.*` or `innovites.ReactDateTimePicker.mpk` packages if present, or Studio Pro will report that widget packages could not be read.
 
 ---
 
@@ -95,7 +95,7 @@ Open **http://localhost:5173** — three cards demonstrate datetime, date-only, 
 
 ```
 src/
-  ReactDateTimePicker.tsx          # Mendix container (class component)
+  MUIReactDateTimePicker.tsx       # Mendix container (class component)
   ReactDateTimePickerUI.tsx        # MUI X pickers + date-fns logic
   MuiPickerProvider.tsx            # Theme + LocalizationProvider
   muiTimeViewRenderers.ts          # Analog TimeClock view renderers

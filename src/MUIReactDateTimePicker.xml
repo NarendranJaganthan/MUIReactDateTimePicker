@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="innovites.muireactdatetimepicker.MUIReactDateTimePicker" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>React Date Time Picker</name>
+    <description>Uses React 18 functional subcomponents, but retains a class-based container for legacy safety</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <systemProperty key="Label" />
+            <systemProperty key="Visibility"/>
+            <systemProperty key="Editability"/>
+            <property key="readOnlyStyle" type="enumeration" required="true" defaultValue="control">
+                <caption>Read-only style</caption>
+                <description/>
+                <enumerationValues>
+                    <enumerationValue key="control">Control</enumerationValue>
+                    <enumerationValue key="text">Text</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="dateTimeAttribute" type="attribute">
+                <caption>DateTime</caption>
+                <description/>
+                <attributeTypes>
+                    <attributeType name="DateTime"/>
+                </attributeTypes>
+            </property>
+            <property key="placeholder" type="textTemplate" required="false">
+                <caption>Placeholder</caption>
+                <description></description> 
+            </property>
+            <property key="invalidDateAttribute" type="attribute" required="false">
+                <caption>Valid date</caption>
+                <description>Boolean property controlled by the widget when input changes. Set to false if the date entered is not a valid date and to true otherwise. Value is only changed when the value in the datepicker changes, therefore initialize the value in mendix. Make sure the user has got write access.</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Behavior">
+            <property key="onChangeAction" type="action" required="false">
+                <caption>OnChange action</caption>
+                <description/>
+            </property>
+            <property key="closeOnSelect" type="boolean" required="true" defaultValue="false">
+                <caption>Close on select</caption>
+                <description>Close the datepicker when a date is selected</description> 
+            </property>
+            <property key="disablePast" type="boolean" required="true" defaultValue="false">
+                <caption>Disable days in past</caption>
+                <description>Disable all days in the past</description> 
+            </property>
+            <property key="minDateAttribute" type="attribute" required="false">
+                <caption>Minimal Date</caption>
+                <description>Attribute used to disable all days before this date</description> 
+                <attributeTypes>
+                    <attributeType name="DateTime"/>
+                </attributeTypes>
+            </property>
+            <property key="maxDateAttribute" type="attribute" required="false">
+                <caption>Maximal Date</caption>
+                <description>Attribute used to disable all days after this date</description> 
+                <attributeTypes>
+                    <attributeType name="DateTime"/>
+                </attributeTypes>
+            </property>
+            <property key="initialViewDate" type="expression" required="false">
+                <caption>Initial View Date</caption>
+                <description>Date used to set the default date the picker opens on when no date is selected.</description> 
+                <returnType type="DateTime" />
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="DateTime Options">
+            <property key="locale" type="textTemplate" required="false">
+                <caption>Locale setting</caption>
+                <description>Change language according to https://momentjs.com/docs/#/i18n/changing-locale/ (e.g en (english) or nl(dutch)) </description> 
+                <translations>
+                    <translation lang="en_US">en</translation>
+                </translations>
+            </property>
+            <property key="picker" type="enumeration" required="true" defaultValue="datetimepicker">
+                <caption>Picker</caption>
+                <description>Whether to use the widget as datetimepicker, datepicker or timepicker</description> 
+                <enumerationValues>
+                    <enumerationValue key="datetimepicker">Datetimepicker</enumerationValue>
+                    <enumerationValue key="datepicker">Datepicker</enumerationValue>
+                    <enumerationValue key="timepicker">TimePicker</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="dateFormat" type="textTemplate" required="false">
+                <caption>Date format</caption>
+                <description>See https://momentjs.com/docs/#/displaying/format/ for available formats. If left empty, the default is selected of the locale.</description> 
+                <translations>
+                    <translation lang="en_US"></translation>
+                </translations>
+            </property>
+            <property key="showWeekNumbers" type="boolean" required="true" defaultValue="false">
+                <caption>Show Week Numbers</caption>
+                <description>Wheter or not to show week numbers in the datepicker</description> 
+            </property>
+            <property key="timeFormat" type="textTemplate" required="false">
+                <caption>Time format</caption>
+                <description>See https://momentjs.com/docs/#/displaying/format/ for available formats. If left empty, the default is selected of the locale.</description> 
+                <translations>
+                    <translation lang="en_US"></translation>
+                </translations>
+            </property>
+            <property key="minHours" type="integer" required="true" defaultValue="0">
+                <caption>Minimal hour</caption>
+                <description>Use this property to set the minimal hour that the time can have</description>
+            </property>
+            <property key="maxHours" type="integer" required="true" defaultValue="23">
+                <caption>Maximal hour</caption>
+                <description>Use this property to set the maximal hour that the time can have</description>
+            </property>
+            <property key="hourStep" type="integer" required="true" defaultValue="1">
+                <caption>Hour step</caption>
+                <description>Use this property to set the hour step. If set to two, two hours are skipped every click</description>
+            </property>
+            <property key="minMinutes" type="integer" required="true" defaultValue="0">
+                <caption>Minimal minute</caption>
+                <description>Use this property to set the minimal minute that the time can have</description>
+            </property>
+            <property key="maxMinutes" type="integer" required="true" defaultValue="59">
+                <caption>Maximal minute</caption>
+                <description>Use this property to set the maximal minute that the time can have</description>
+            </property>
+            <property key="minuteStep" type="integer" required="true" defaultValue="1">
+                <caption>Minute step</caption>
+                <description>Use this property to set the minute step. If set to two, two minutes are skipped every click</description>
+            </property>
+            <property key="minSeconds" type="integer" required="true" defaultValue="0">
+                <caption>Minimal seconds</caption>
+                <description>Use this property to set the minimal second that the time can have</description>
+            </property>
+            <property key="maxSeconds" type="integer" required="true" defaultValue="59">
+                <caption>Maximal seconds</caption>
+                <description>Use this property to set the maximal second that the time can have</description>
+            </property>
+            <property key="secondStep" type="integer" required="true" defaultValue="1">
+                <caption>Second step</caption>
+                <description>Use this property to set the second step. If set to two, two seconds are skipped every click</description>
+            </property>
+        </propertyGroup>
+    </properties>
+
+  
+</widget>

@@ -1,6 +1,6 @@
 {
-  "name": "reactdatetimepicker",
-  "widgetName": "ReactDateTimePicker",
+  "name": "muireactdatetimepicker",
+  "widgetName": "MUIReactDateTimePicker",
   "version": "1.0.0",
   "description": "Uses React 18 functional subcomponents, but retains a class-based container for legacy safety",
   "copyright": "Copyright (c) InnoVites B.V. All right reserved.",
