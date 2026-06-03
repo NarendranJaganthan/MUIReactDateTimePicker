@@ -1,0 +1,52 @@
+{
+  "name": "reactdatetimepicker",
+  "widgetName": "ReactDateTimePicker",
+  "version": "1.0.0",
+  "description": "Uses React 18 functional subcomponents, but retains a class-based container for legacy safety",
+  "copyright": "Copyright (c) InnoVites B.V. All right reserved.",
+  "author": "Narendran Jaganathan",
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT",
+  "config": {
+    "projectPath": "../../",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": 3000
+  },
+  "packagePath": "innovites",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server",
+    "dev": "pluggable-widgets-tools start:web",
+    "prototype": "vite prototype",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^10.15.0",
+    "@types/big.js": "^6.0.2",
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^6.4.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^9.0.1",
+    "@mui/x-date-pickers": "^9.3.0",
+    "classnames": "^2.2.6",
+    "date-fns": "^4.1.0"
+  },
+  "resolutions": {
+    "react": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "react-native": "0.72.7"
+  },
+  "overrides": {
+    "react": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "react-native": "0.72.7"
+  }
+}

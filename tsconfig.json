@@ -1,0 +1,10 @@
+{
+  "extends": "@mendix/pluggable-widgets-tools/configs/tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "ESNext",    // Ensures ES Module output, overrides CommonJS if set
+    "target": "ES6"        // Ensures modern JS output
+  },
+  "include": ["./src", "./typings"],
+  "exclude": ["./prototype"]
+}

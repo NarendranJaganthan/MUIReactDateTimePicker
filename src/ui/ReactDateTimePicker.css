@@ -1,0 +1,512 @@
+/* Innovites React DateTime Picker — premium MUI X styling */
+
+.innovites-dtp {
+    --innovites-dtp-accent: #2563eb;
+    --innovites-dtp-accent-dark: #1d4ed8;
+    --innovites-dtp-accent-light: #60a5fa;
+    --innovites-dtp-accent-soft: #eff6ff;
+    --innovites-dtp-accent-glow: rgba(37, 99, 235, 0.18);
+    --innovites-dtp-border: #dbe4f0;
+    --innovites-dtp-border-strong: #b8c9e0;
+    --innovites-dtp-text: #0f172a;
+    --innovites-dtp-muted: #64748b;
+    --innovites-dtp-bg: #ffffff;
+    --innovites-dtp-surface: #f8fafc;
+    --innovites-dtp-surface-elevated: #f1f5f9;
+    --innovites-dtp-panel-time: linear-gradient(165deg, #f8fafc 0%, #eef4ff 55%, #f1f5f9 100%);
+    --innovites-dtp-focus-ring: rgba(37, 99, 235, 0.28);
+    --innovites-dtp-shadow-popover: 0 20px 50px rgba(15, 23, 42, 0.16), 0 8px 20px rgba(15, 23, 42, 0.08);
+    --innovites-dtp-cal-width: 20.5rem;
+    --innovites-dtp-clock-width: 17rem;
+    --innovites-dtp-radius-lg: 0.875rem;
+    --innovites-dtp-radius-md: 0.625rem;
+
+    position: relative;
+    display: block;
+    width: 100%;
+    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.innovites-dtp--text {
+    display: inline-block;
+    padding: 0.25rem 0;
+    font-size: 0.9375rem;
+    color: var(--innovites-dtp-text);
+}
+
+.innovites-dtp--disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* —— Input field —— */
+.innovites-dtp__mui-picker {
+    width: 100%;
+}
+
+.innovites-dtp__mui-field {
+    width: 100%;
+}
+
+.innovites-dtp__mui-field .MuiPickersOutlinedInput-root {
+    min-height: 2.625rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--innovites-dtp-text);
+    background: var(--innovites-dtp-bg);
+    border-radius: var(--innovites-dtp-radius-md);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.innovites-dtp__mui-field .MuiPickersOutlinedInput-notchedOutline {
+    border-color: var(--innovites-dtp-border);
+    transition: border-color 0.2s ease;
+}
+
+.innovites-dtp__mui-field .MuiPickersOutlinedInput-root:hover .MuiPickersOutlinedInput-notchedOutline {
+    border-color: var(--innovites-dtp-border-strong);
+}
+
+.innovites-dtp__mui-field .MuiPickersOutlinedInput-root.Mui-focused {
+    box-shadow: 0 0 0 4px var(--innovites-dtp-focus-ring);
+}
+
+.innovites-dtp__mui-field .MuiPickersOutlinedInput-root.Mui-focused .MuiPickersOutlinedInput-notchedOutline {
+    border-color: var(--innovites-dtp-accent);
+    border-width: 1.5px;
+}
+
+.innovites-dtp__mui-field .MuiPickersInputBase-root,
+.innovites-dtp__mui-field .MuiPickersOutlinedInput-root {
+    align-items: center;
+}
+
+.innovites-dtp__mui-field .MuiInputAdornment-root {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+}
+
+.innovites-dtp__mui-field .MuiInputAdornment-positionEnd {
+    margin-right: 0.25rem;
+    margin-left: 0.125rem;
+}
+
+.innovites-dtp__mui-field .MuiInputAdornment-root .MuiIconButton-root {
+    color: #2563eb;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.375rem;
+    border-radius: var(--innovites-dtp-radius-md);
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.innovites-dtp__mui-field .MuiInputAdornment-root .MuiIconButton-root:hover {
+    background: #eff6ff;
+    transform: scale(1.04);
+}
+
+.innovites-dtp__mui-field .MuiInputAdornment-root .MuiSvgIcon-root {
+    font-size: 1.25rem;
+}
+
+/* —— Popover shell (portal: re-declare tokens — not under .innovites-dtp) —— */
+.innovites-dtp__popper,
+.innovites-dtp__paper {
+    --innovites-dtp-accent: #2563eb;
+    --innovites-dtp-accent-dark: #1d4ed8;
+    --innovites-dtp-accent-light: #60a5fa;
+    --innovites-dtp-accent-soft: #eff6ff;
+    --innovites-dtp-accent-glow: rgba(37, 99, 235, 0.18);
+    --innovites-dtp-border: #dbe4f0;
+    --innovites-dtp-border-strong: #b8c9e0;
+    --innovites-dtp-text: #0f172a;
+    --innovites-dtp-muted: #475569;
+    --innovites-dtp-bg: #ffffff;
+    --innovites-dtp-surface: #f8fafc;
+    --innovites-dtp-surface-elevated: #f1f5f9;
+    --innovites-dtp-panel-time: linear-gradient(165deg, #f8fafc 0%, #eef4ff 55%, #f1f5f9 100%);
+    --innovites-dtp-focus-ring: rgba(37, 99, 235, 0.28);
+    --innovites-dtp-shadow-popover: 0 20px 50px rgba(15, 23, 42, 0.16), 0 8px 20px rgba(15, 23, 42, 0.08);
+    --innovites-dtp-cal-width: 20.5rem;
+    --innovites-dtp-clock-width: 17rem;
+    --innovites-dtp-radius-lg: 0.875rem;
+    --innovites-dtp-radius-md: 0.625rem;
+    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.innovites-dtp__popper {
+    z-index: 11000 !important;
+}
+
+.innovites-dtp__paper,
+.innovites-dtp__popper .MuiPaper-root {
+    border-radius: var(--innovites-dtp-radius-lg) !important;
+    overflow: hidden;
+    box-shadow: var(--innovites-dtp-shadow-popover) !important;
+    border: 1px solid var(--innovites-dtp-border) !important;
+    background: var(--innovites-dtp-bg) !important;
+}
+
+.innovites-dtp__layout.MuiPickersLayout-root {
+    min-width: 0;
+    background: var(--innovites-dtp-bg);
+}
+
+/* Hide detached shortcuts rail */
+.innovites-dtp__popper .MuiPickersLayout-shortcuts {
+    display: none !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* —— Date + time split layout —— */
+.innovites-dtp__layout--datetime .MuiPickersLayout-contentWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+.innovites-dtp__layout--datetime .MuiDateCalendar-root {
+    flex: 0 0 var(--innovites-dtp-cal-width);
+    width: var(--innovites-dtp-cal-width) !important;
+    max-width: var(--innovites-dtp-cal-width);
+    border-right: 1px solid var(--innovites-dtp-border);
+    background: var(--innovites-dtp-bg);
+    padding-bottom: 0.35rem;
+}
+
+.innovites-dtp__layout--datetime .MuiTimeClock-root {
+    flex: 0 0 var(--innovites-dtp-clock-width);
+    width: var(--innovites-dtp-clock-width);
+    min-width: var(--innovites-dtp-clock-width);
+    align-self: stretch;
+    background: var(--innovites-dtp-panel-time);
+    border-left: none;
+}
+
+.innovites-dtp__layout--datetime .MuiTimeClock-root::before {
+    content: "Time";
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--innovites-dtp-muted);
+    pointer-events: none;
+}
+
+/* Calendar header band */
+.innovites-dtp__popper .MuiPickersCalendarHeader-root {
+    margin: 0;
+    padding: 0.875rem 1.25rem 0.625rem;
+    background: linear-gradient(180deg, var(--innovites-dtp-surface) 0%, var(--innovites-dtp-bg) 100%);
+    border-bottom: 1px solid var(--innovites-dtp-border);
+}
+
+.innovites-dtp__popper .MuiPickersCalendarHeader-label {
+    font-size: 1.0625rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+    color: var(--innovites-dtp-text);
+}
+
+.innovites-dtp__popper .MuiPickersArrowSwitcher-button {
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: var(--innovites-dtp-radius-md);
+    color: var(--innovites-dtp-muted);
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.innovites-dtp__popper .MuiPickersArrowSwitcher-button:hover {
+    background: var(--innovites-dtp-accent-soft);
+    color: var(--innovites-dtp-accent);
+}
+
+/* Date only */
+.innovites-dtp__layout--datepicker .MuiPickersLayout-contentWrapper {
+    justify-content: center;
+}
+
+.innovites-dtp__layout--datepicker .MuiDateCalendar-root {
+    margin: 0 auto;
+}
+
+/* Time only */
+.innovites-dtp__layout--timepicker .MuiPickersLayout-contentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    min-width: var(--innovites-dtp-clock-width);
+    background: var(--innovites-dtp-panel-time);
+}
+
+.innovites-dtp__layout--timepicker .MuiTimeClock-root {
+    margin: 0 auto;
+    width: var(--innovites-dtp-clock-width);
+    min-width: var(--innovites-dtp-clock-width);
+    background: transparent;
+}
+
+/* Day grid */
+.innovites-dtp__popper .MuiDayCalendar-header,
+.innovites-dtp__popper .MuiDayCalendar-weekContainer {
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.innovites-dtp__popper .MuiDayCalendar-weekDayLabel {
+    flex: 0 0 2.375rem;
+    max-width: 2.375rem;
+    font-weight: 700;
+    color: var(--innovites-dtp-muted);
+}
+
+.innovites-dtp__popper .MuiPickersDay-root {
+    flex: 0 0 2.375rem;
+    max-width: 2.375rem;
+    height: 2.375rem;
+    margin: 0.1rem;
+    font-weight: 500;
+    transition: background-color 0.12s ease, color 0.12s ease, transform 0.12s ease;
+}
+
+.innovites-dtp__popper .MuiPickersDay-root:hover {
+    transform: scale(1.05);
+}
+
+.innovites-dtp__popper .MuiPickersDay-root.Mui-disabled:not(.Mui-selected) {
+    color: #cbd5e1;
+}
+
+.innovites-dtp__popper .MuiPickersDay-root.MuiPickersDay-dayOutsideMonth {
+    color: #94a3b8;
+}
+
+/* Analog clock */
+.innovites-dtp__popper .MuiTimeClock-root .MuiClock-root {
+    width: 14rem;
+    height: 14rem;
+}
+
+.innovites-dtp__popper .MuiTimeClock-root .MuiClock-clock {
+    background: var(--innovites-dtp-bg);
+    box-shadow:
+        inset 0 0 0 1px var(--innovites-dtp-border),
+        0 4px 24px var(--innovites-dtp-accent-glow);
+}
+
+.innovites-dtp__popper .MuiTimeClock-arrowSwitcher,
+.innovites-dtp__popper .MuiTimeClock-root > .MuiPickersArrowSwitcher-root {
+    position: absolute !important;
+    top: 0.875rem !important;
+    right: 0.875rem !important;
+    left: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.innovites-dtp__layout--datetime .MuiPickersCalendarHeader-root .MuiPickersArrowSwitcher-root,
+.innovites-dtp__layout--datepicker .MuiPickersCalendarHeader-root .MuiPickersArrowSwitcher-root {
+    position: static;
+    width: auto;
+}
+
+.innovites-dtp__popper .MuiTimeClock-root .MuiClockNumber-root.Mui-selected {
+    background: var(--innovites-dtp-accent);
+    box-shadow: 0 2px 8px var(--innovites-dtp-accent-glow);
+}
+
+/* AM / PM segmented toggles (MUI uses .MuiClock-selected, not .Mui-selected) */
+.innovites-dtp__popper .MuiClock-amButton,
+.innovites-dtp__popper .MuiClock-pmButton {
+    min-width: 3.125rem;
+    height: 2.25rem;
+    bottom: 10px !important;
+    border-radius: 999px !important;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.12s ease;
+}
+
+.innovites-dtp__popper .MuiClock-amButton {
+    left: 10px !important;
+}
+
+.innovites-dtp__popper .MuiClock-pmButton {
+    right: 10px !important;
+}
+
+.innovites-dtp__popper .MuiClock-amButton .MuiClock-meridiemText,
+.innovites-dtp__popper .MuiClock-pmButton .MuiClock-meridiemText,
+.innovites-dtp__popper .MuiClock-amButton .MuiTypography-root,
+.innovites-dtp__popper .MuiClock-pmButton .MuiTypography-root {
+    font-weight: 700 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.innovites-dtp__popper .MuiClock-amButton:not(.MuiClock-selected) .MuiTypography-root,
+.innovites-dtp__popper .MuiClock-pmButton:not(.MuiClock-selected) .MuiTypography-root {
+    color: #334155 !important;
+}
+
+.innovites-dtp__popper .MuiClock-amButton:not(.MuiClock-selected),
+.innovites-dtp__popper .MuiClock-pmButton:not(.MuiClock-selected) {
+    background: #ffffff !important;
+    border: 1px solid #b8c9e0 !important;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.innovites-dtp__popper .MuiClock-amButton:not(.MuiClock-selected):hover,
+.innovites-dtp__popper .MuiClock-pmButton:not(.MuiClock-selected):hover {
+    background: var(--innovites-dtp-accent-soft) !important;
+    border-color: var(--innovites-dtp-accent-light) !important;
+    transform: translateY(-1px);
+}
+
+.innovites-dtp__popper .MuiClock-amButton.MuiClock-selected,
+.innovites-dtp__popper .MuiClock-pmButton.MuiClock-selected {
+    background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%) !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 3px 12px rgba(37, 99, 235, 0.35) !important;
+}
+
+.innovites-dtp__popper .MuiClock-amButton.MuiClock-selected .MuiTypography-root,
+.innovites-dtp__popper .MuiClock-pmButton.MuiClock-selected .MuiTypography-root {
+    color: #ffffff !important;
+}
+
+/* Footer action bar */
+.innovites-dtp__popper .MuiPickersLayout-actionBar,
+.innovites-dtp__paper .MuiPickersLayout-actionBar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    min-height: 3.25rem;
+    padding: 0.75rem 1.125rem !important;
+    gap: 0.5rem !important;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
+    border-top: 1px solid #dbe4f0 !important;
+    box-sizing: border-box;
+}
+
+.innovites-dtp__popper .MuiPickersLayout-actionBar .MuiButton-root,
+.innovites-dtp__paper .MuiPickersLayout-actionBar .MuiButton-root {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-width: 4.5rem;
+    height: 2.375rem;
+    padding: 0 1rem !important;
+    border-radius: 0.625rem;
+    text-transform: none !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    box-shadow: none;
+}
+
+/* Today — left */
+.innovites-dtp__layout--datetime .MuiPickersLayout-actionBar .MuiButton-root:nth-child(1),
+.innovites-dtp__layout--datepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(1) {
+    margin-right: auto !important;
+    color: #2563eb !important;
+    background: #ffffff !important;
+    border: 1px solid #b8c9e0 !important;
+}
+
+.innovites-dtp__layout--datetime .MuiPickersLayout-actionBar .MuiButton-root:nth-child(1):hover,
+.innovites-dtp__layout--datepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(1):hover {
+    background: #eff6ff !important;
+    border-color: #2563eb !important;
+}
+
+/* Cancel — middle (datetime / date) */
+.innovites-dtp__layout--datetime .MuiPickersLayout-actionBar .MuiButton-root:nth-child(2),
+.innovites-dtp__layout--datepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(2) {
+    color: #64748b !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.innovites-dtp__layout--datetime .MuiPickersLayout-actionBar .MuiButton-root:nth-child(2):hover,
+.innovites-dtp__layout--datepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(2):hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* OK — right (datetime / date, 3rd button) */
+.innovites-dtp__layout--datetime .MuiPickersLayout-actionBar .MuiButton-root:nth-child(3),
+.innovites-dtp__layout--datepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(3),
+.innovites-dtp__layout--datetime .MuiPickersLayout-actionBar .MuiButton-root:last-child,
+.innovites-dtp__layout--datepicker .MuiPickersLayout-actionBar .MuiButton-root:last-child {
+    color: #ffffff !important;
+    background: #2563eb !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35) !important;
+}
+
+.innovites-dtp__layout--datetime .MuiPickersLayout-actionBar .MuiButton-root:nth-child(3):hover,
+.innovites-dtp__layout--datepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(3):hover,
+.innovites-dtp__layout--datetime .MuiPickersLayout-actionBar .MuiButton-root:last-child:hover,
+.innovites-dtp__layout--datepicker .MuiPickersLayout-actionBar .MuiButton-root:last-child:hover {
+    background: #1d4ed8 !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Time-only: Cancel left, OK right */
+.innovites-dtp__layout--timepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(1) {
+    margin-right: auto !important;
+    color: #64748b !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.innovites-dtp__layout--timepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(1):hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+.innovites-dtp__layout--timepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(2),
+.innovites-dtp__layout--timepicker .MuiPickersLayout-actionBar .MuiButton-root:last-child {
+    color: #ffffff !important;
+    background: #2563eb !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35) !important;
+}
+
+.innovites-dtp__layout--timepicker .MuiPickersLayout-actionBar .MuiButton-root:nth-child(2):hover,
+.innovites-dtp__layout--timepicker .MuiPickersLayout-actionBar .MuiButton-root:last-child:hover {
+    background: #1d4ed8 !important;
+}
+
+/* Week numbers */
+.innovites-dtp__popper .MuiDateCalendar-root .MuiDayCalendar-weekNumber {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--innovites-dtp-muted);
+    opacity: 0.85;
+}
