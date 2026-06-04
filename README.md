@@ -1,6 +1,6 @@
 # InnoVites Date Time Picker
 
-Mendix pluggable widget by **[InnoVites](https://www.innovites.com/)** for selecting dates and times in Mendix 9+ web apps (React client). The picker UI uses [MUI X Date and Time Pickers](https://mui.com/x/react-date-pickers/) (desktop layout, analog time clock, AM/PM) and [date-fns](https://date-fns.org/) for parsing and locales. Styling follows InnoVites brand colors (gold accent `#f7a823`, warm cream surfaces).
+Mendix pluggable widget by **[InnoVites](https://www.innovites.com/)** for selecting dates and times in Mendix 9+ web apps (React client). The picker UI uses [MUI X Date and Time Pickers](https://mui.com/x/react-date-pickers/) (desktop layout, analog time clock, AM/PM) and [date-fns](https://date-fns.org/) for parsing and locales. Default styling uses a generic SaaS blue palette (primary `#2563eb`, soft surfaces `#f8fafc` / `#eff6ff`).
 
 | | |
 |---|---|
@@ -123,6 +123,14 @@ prototype/                         # Standalone Vite demo
 - [@mui/material](https://mui.com/material-ui/) — theming and inputs
 - [date-fns](https://date-fns.org/) — parsing, formatting, locales (MIT)
 - [@emotion/react](https://emotion.sh/) — styles used by MUI (MIT)
+
+---
+
+## Marketplace listing
+
+Copy-paste text for Mendix Marketplace **Publish Component**: [docs/marketplace/MARKETPLACE_LISTING.md](docs/marketplace/MARKETPLACE_LISTING.md)
+
+**Cover image** (PNG or JPG, max 1 MB, min 600×420 px): upload `assets/marketplace-cover.jpg` (recommended) or `assets/marketplace-cover.png`. See [assets/README.md](assets/README.md).
 
 ---
 

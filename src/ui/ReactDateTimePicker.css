@@ -1,20 +1,20 @@
 /* Innovites React DateTime Picker — premium MUI X styling */
 
 .innovites-dtp {
-    --innovites-dtp-accent: #f7a823;
-    --innovites-dtp-accent-dark: #d99218;
-    --innovites-dtp-accent-light: #f9c96a;
-    --innovites-dtp-accent-soft: #fff7e9;
-    --innovites-dtp-accent-glow: rgba(247, 168, 35, 0.22);
-    --innovites-dtp-border: #e8dcc4;
-    --innovites-dtp-border-strong: #d4c4a8;
-    --innovites-dtp-text: #1a1a1a;
-    --innovites-dtp-muted: #595959;
+    --innovites-dtp-accent: #2563eb;
+    --innovites-dtp-accent-dark: #1d4ed8;
+    --innovites-dtp-accent-light: #60a5fa;
+    --innovites-dtp-accent-soft: #eff6ff;
+    --innovites-dtp-accent-glow: rgba(37, 99, 235, 0.18);
+    --innovites-dtp-border: #dbe4f0;
+    --innovites-dtp-border-strong: #b8c9e0;
+    --innovites-dtp-text: #0f172a;
+    --innovites-dtp-muted: #64748b;
     --innovites-dtp-bg: #ffffff;
-    --innovites-dtp-surface: #fff7e9;
-    --innovites-dtp-surface-elevated: #ffe8c0;
-    --innovites-dtp-panel-time: linear-gradient(165deg, #fff7e9 0%, #ffe8c0 55%, #eee1ca 100%);
-    --innovites-dtp-focus-ring: rgba(247, 168, 35, 0.35);
+    --innovites-dtp-surface: #f8fafc;
+    --innovites-dtp-surface-elevated: #f1f5f9;
+    --innovites-dtp-panel-time: linear-gradient(165deg, #f8fafc 0%, #eef4ff 55%, #f1f5f9 100%);
+    --innovites-dtp-focus-ring: rgba(37, 99, 235, 0.28);
     --innovites-dtp-shadow-popover: 0 20px 50px rgba(15, 23, 42, 0.16), 0 8px 20px rgba(15, 23, 42, 0.08);
     --innovites-dtp-cal-width: 20.5rem;
     --innovites-dtp-clock-width: 17rem;
@@ -116,20 +116,20 @@
 /* —— Popover shell (portal: re-declare tokens — not under .innovites-dtp) —— */
 .innovites-dtp__popper,
 .innovites-dtp__paper {
-    --innovites-dtp-accent: #f7a823;
-    --innovites-dtp-accent-dark: #d99218;
-    --innovites-dtp-accent-light: #f9c96a;
-    --innovites-dtp-accent-soft: #fff7e9;
-    --innovites-dtp-accent-glow: rgba(247, 168, 35, 0.22);
-    --innovites-dtp-border: #e8dcc4;
-    --innovites-dtp-border-strong: #d4c4a8;
-    --innovites-dtp-text: #1a1a1a;
-    --innovites-dtp-muted: #595959;
+    --innovites-dtp-accent: #2563eb;
+    --innovites-dtp-accent-dark: #1d4ed8;
+    --innovites-dtp-accent-light: #60a5fa;
+    --innovites-dtp-accent-soft: #eff6ff;
+    --innovites-dtp-accent-glow: rgba(37, 99, 235, 0.18);
+    --innovites-dtp-border: #dbe4f0;
+    --innovites-dtp-border-strong: #b8c9e0;
+    --innovites-dtp-text: #0f172a;
+    --innovites-dtp-muted: #475569;
     --innovites-dtp-bg: #ffffff;
-    --innovites-dtp-surface: #fff7e9;
-    --innovites-dtp-surface-elevated: #ffe8c0;
-    --innovites-dtp-panel-time: linear-gradient(165deg, #fff7e9 0%, #ffe8c0 55%, #eee1ca 100%);
-    --innovites-dtp-focus-ring: rgba(247, 168, 35, 0.35);
+    --innovites-dtp-surface: #f8fafc;
+    --innovites-dtp-surface-elevated: #f1f5f9;
+    --innovites-dtp-panel-time: linear-gradient(165deg, #f8fafc 0%, #eef4ff 55%, #f1f5f9 100%);
+    --innovites-dtp-focus-ring: rgba(37, 99, 235, 0.28);
     --innovites-dtp-shadow-popover: 0 20px 50px rgba(15, 23, 42, 0.16), 0 8px 20px rgba(15, 23, 42, 0.08);
     --innovites-dtp-cal-width: 20.5rem;
     --innovites-dtp-clock-width: 17rem;
@@ -366,14 +366,14 @@
 
 .innovites-dtp__popper .MuiClock-amButton:not(.MuiClock-selected) .MuiTypography-root,
 .innovites-dtp__popper .MuiClock-pmButton:not(.MuiClock-selected) .MuiTypography-root {
-    color: var(--innovites-dtp-muted) !important;
+    color: #334155 !important;
 }
 
 .innovites-dtp__popper .MuiClock-amButton:not(.MuiClock-selected),
 .innovites-dtp__popper .MuiClock-pmButton:not(.MuiClock-selected) {
     background: #ffffff !important;
-    border: 1px solid var(--innovites-dtp-border-strong) !important;
-    box-shadow: 0 1px 3px rgba(26, 26, 26, 0.08);
+    border: 1px solid #b8c9e0 !important;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
 }
 
 .innovites-dtp__popper .MuiClock-amButton:not(.MuiClock-selected):hover,

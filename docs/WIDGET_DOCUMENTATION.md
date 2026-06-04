@@ -366,15 +366,22 @@ Popover styles use a high `z-index` so the calendar appears above Mendix modals 
 - Theme overrides: `src/components/MuiPickerProvider.tsx`
 - CSS variables are re-declared on `.innovites-dtp__popper` because the popover renders in a **portal** outside the widget root.
 
-Default accent colors match **[InnoVites](https://www.innovites.com/)** brand gold (`#f7a823`) with warm cream surfaces (`#fff7e9`, `#ffe8c0`).
+Default accent colors use a **generic SaaS blue** palette aligned with common MUI primary styling:
+
+| Token | Default |
+|--------|---------|
+| Accent | `#2563eb` |
+| Accent dark | `#1d4ed8` |
+| Accent soft | `#eff6ff` |
+| Border | `#dbe4f0` |
+| Text | `#0f172a` |
 
 Example override (in your Mendix theme or custom CSS after deployment):
 
 ```css
 .innovites-dtp__popper {
-  --innovites-dtp-accent: #f7a823;
-  --innovites-dtp-accent-dark: #d99218;
-  --innovites-dtp-accent-soft: #fff7e9;
+  --innovites-dtp-accent: #2563eb;
+  --innovites-dtp-accent-soft: #eff6ff;
 }
 ```
 

@@ -41,7 +41,7 @@ The widget supports three modes (set in Studio Pro):
 - **Cancel** — close without applying pending changes
 - **OK** — commit the selection to your Mendix `DateTime` attribute
 
-Styling uses **InnoVites brand colors** (gold accent `#f7a823`, warm cream surfaces) so it fits enterprise apps without looking like a generic blue SaaS control. You can still override CSS variables if your app uses a different palette.
+Default styling uses a familiar **SaaS blue** palette (primary `#2563eb`, light blue surfaces `#eff6ff` / `#f8fafc`) so the picker fits most Mendix and MUI apps out of the box. Override CSS variables if your theme uses different brand colors.
 
 ---
 
@@ -222,9 +222,21 @@ If you use it in a project, we would love to hear what worked — and what would
 ## Publishing checklist (Medium)
 
 1. Copy sections above into Medium (H1 = title; `##` = subheadings).
-2. Add a **hero image** — use `assets/mendix-marketplace-mui-react-datetime-picker-innovites.png` from the repo.
+2. Add a **hero image** — `assets/mendix-marketplace-mui-react-datetime-picker-innovites.jpg` (or `.png`; see below).
 3. Set **canonical link** if you also host this on innovites.com.
 4. Add **links** to Mendix Marketplace listing when published.
 5. Pin a **code snippet** only for install steps (Medium readers skim lists).
+
+### Hero image (Mendix Marketplace & Medium)
+
+| Requirement | Value |
+|-------------|--------|
+| Format | `.png` or `.jpg` |
+| Max file size | **1 MB** |
+| Min resolution | **600 × 420 px** |
+
+**Recommended upload:** `assets/mendix-marketplace-mui-react-datetime-picker-innovites.jpg` (1280×853, ~120 KB).  
+**PNG option:** `assets/mendix-marketplace-mui-react-datetime-picker-innovites.png` (1217×811, ~1 MB).  
+See `assets/README.md` to re-export after updating artwork.
 
 *End of article.*

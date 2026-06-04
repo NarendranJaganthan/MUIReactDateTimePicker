@@ -5,22 +5,22 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import "@mui/x-date-pickers/themeAugmentation";
 
-/** InnoVites brand palette — https://www.innovites.com/ */
-const accent = "#f7a823";
-const accentDark = "#d99218";
-const accentLight = "#f9c96a";
-const accentSoft = "#fff7e9";
-const accentGlow = "rgba(247, 168, 35, 0.35)";
-const border = "#e8dcc4";
-const text = "#1a1a1a";
-const muted = "#595959";
+/** Generic SaaS / MUI primary blue palette */
+const accent = "#2563eb";
+const accentDark = "#1d4ed8";
+const accentLight = "#60a5fa";
+const accentSoft = "#eff6ff";
+const accentGlow = "rgba(37, 99, 235, 0.35)";
+const border = "#dbe4f0";
+const text = "#0f172a";
+const muted = "#64748b";
 
 const pickerTheme = createTheme({
     palette: {
         primary: { main: accent, dark: accentDark, light: accentLight, contrastText: "#fff" },
         text: { primary: text, secondary: muted },
         divider: border,
-        background: { paper: "#fff", default: "#fff7e9" }
+        background: { paper: "#fff", default: "#f8fafc" }
     },
     shape: { borderRadius: 10 },
     typography: {
@@ -176,7 +176,7 @@ const pickerTheme = createTheme({
                 },
                 clock: {
                     backgroundColor: "#fff",
-                    boxShadow: `inset 0 0 0 1px ${border}, 0 4px 24px rgba(247, 168, 35, 0.14)`
+                    boxShadow: "inset 0 0 0 1px #dbe4f0, 0 4px 24px rgba(37, 99, 235, 0.12)"
                 },
                 amButton: {
                     borderRadius: 999,
